@@ -1,0 +1,35 @@
+body {
+  background-color: #282828;
+  color: #e2cca9;
+  font-family: 'Arial', sans-serif;
+}
+
+.start {
+  text-align: center;
+  font-size: 125%;
+}
+
+.sbelow {
+  text-align: center;
+  width: 90%;
+  border-width: 0.5px;
+  border-color: #e9b143;
+}
+
+.orange {
+  color: #f28534;
+}
+
+.content {
+  width: 90%;
+  margin: auto;
+}
+
+a {
+  color: #80aa9e;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #d3869b;
+}
