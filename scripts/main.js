@@ -22,6 +22,7 @@ function change_stat(uptime, tvisit, uvisit) {
     uptime.innerHTML = data.uptime;
     tvisit.innerHTML = data.tvisits;
     uvisit.innerHTML = data.uvisits;
+    if(data.node == true) document.getElementById("errnonode").style = "display: none;"
   })
   .catch(error => {
     uptime.innerHTML = "0 (E)";

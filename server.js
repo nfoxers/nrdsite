@@ -23,10 +23,15 @@ function writejson(pth, data) {
 let system = {
   uptime: 0,
   tvisits: 0,
-  uvisits: 0
+  uvisits: 0,
+  node: false
 }
 
 system = readjson("data/system.json");
+if(system.node == false) {
+  system.node = true;
+  writejson("data/system.json", system);
+}
 
 app.get("/{*splat.html}", (req, res, next) => {
   console.log(`${req.ip} opened ${req.path}`);
@@ -58,8 +63,8 @@ http.createServer(app).listen(80, () => {
 });
 
 const sslopt = {
-  key: fs.readFileSync(path.join(__dirname, "server.key")),
-  cert: fs.readFileSync(path.join(__dirname, "server.cert"))
+  key: fs.readFileSync(path.join(__dirname, "env/server.key")),
+  cert: fs.readFileSync(path.join(__dirname, "env/server.cert"))
 };
 
 https.createServer(sslopt, app).listen(443, () => {
@@ -74,6 +79,7 @@ process.on("SIGINT", () => {
 
   system.uptime = 0;
   system.uvisits = 0;
+  system.node = false;
   writejson("data/system.json", system);
 
   process.exit();
