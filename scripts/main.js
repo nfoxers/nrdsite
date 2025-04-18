@@ -12,7 +12,7 @@ function change_ip(element) {
 
 function change_hname(addr, port) {
   addr.innerHTML = window.location.hostname;
-  port.innerHTML = window.location.port;
+  port.innerHTML = window.location.port || 80;
 }
 
 function change_stat(uptime, tvisit, uvisit) {
