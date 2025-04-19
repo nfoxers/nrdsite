@@ -33,6 +33,19 @@ body {
   margin: auto;
 }
 
+.mspace {
+  font-family: monospace;
+}
+
+.image {
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.03);
+
+}
+
 a {
   color: #80aa9e;
   text-decoration: none;
@@ -40,4 +53,46 @@ a {
 
 a:visited {
   color: #d3869b;
+}
+
+footer p{
+  font-family: monospace;
+  text-align: center;
+  color: #928374;
+}
+
+form p {
+  font-size: 90%;
+}
+
+input {
+  outline: none;
+  background-color: #32302f;
+  color: #e2cca9;
+  width: 100%;
+  border: none;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+input#send {
+  background-color: #45403d;
+  width: 100%;
+  margin: auto;
+  margin-top: 2.5px;
+}
+
+input#send:hover {
+  background-color: #5a524c;
+}
+
+textarea {
+  outline: none;
+  background-color: #32302f;
+  color: #e2cca9;
+  width: 100%;
+  border: none;
+  padding: 6px;
+  resize: none;
+  box-sizing: border-box;
 }

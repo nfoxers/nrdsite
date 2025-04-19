@@ -15,41 +15,60 @@
 
   <div class="content">
     <p style="font-size: 150%;">Hi.</p>
-    <p style="font-size: 150%;">My name is <span style="font-weight: 500; font-style: italic;">Narada Fox</span>, or just <span class="orange">fox</span>.</p>
+    <p style="font-size: 150%;">I'm <span id="name"></span></p>
     <p style="font-size: 150%;">I make things and i love to communicate.</p>
     <br>
 
     <div class="image">
-      <img src="img/foxy.jpg" style="width: 100%; height: auto; border: 1.5px solid #e2cca9; border-radius: 1.25%;" alt="cute fox image ^w^">
-      <p style="text-align: center; margin-top: 0; font-size: small; font-style: italic; color: #7c6f64;">me :3</p>
+      <img src="img/foxy.jpg" style="width: 100%; height: auto; border: 1.5px solid #e2cca9; border-radius: 1.25%;" alt="cute fox image ^w^" id="mainimage">
+      <p style="text-align: center; margin-top: 0; font-size: small; font-style: italic; color: #7c6f64;" class="mspace">me :<span id="kliks">3</span></p>
     </div>
     <br>
 
-    <p style="font-size: 150%;">Wanna read more? </p>
+    <p style="font-size: 175%;" class="mspace" >Wanna read more? </p>
     <p><a href="pages/about.html">about me</a></p>
     <p><a href="pages/works.html">my works</a></p>
     <p><a href="pages/mhouse.html">my living condition</a></p>
     <br>
 
-    <p style="font-size: 150%;">Also, here's my socials: </p>
+    <p style="font-size: 175%;" class="mspace">Also, these are my socials: </p>
     <p>discord: <a href="https://discordapp.com/users/1141635788585566251" target="_blank">sezyn1</a></p>
     <p>twitter: <a href="https://x.com/GeneralizedAcc" target="_blank">GeneralizedAcc</a></p>
     <p>instagram: <a href="https://www.instagram.com/narada.fox.calc" target="_blank">narada.fox.calc</a></p>
     <p>github: <a href="https://github.com/wkokplauo666" target="_blank">wkokplauo666</a></p>
     <p>facebook: <a href="https://facebook.com/profile.php?id=61575215430497" target="_blank">Narada Faux</a></p>
     <p>email: <a href="mailto:narada.fox7pc@gmail.com" target="_blank">narada.fox7pc@gmail.com</a></p>
-    <p>phone (whatsapp): <a href="tel:+6281953333395" target="_blank">+62 819-5333-3395</a></p>
+    <p>phone (whatsapp): <a href="https://wa.me/6281953333395" target="_blank">+62 819-5333-3395</a></p>
     <br>
 
-    <p style="font-size: 150%;">Nerdy info for nerds </p>
-    <p id="errnonode"><span style="color: #f2594b;">error: </span>webpage is not ran by node js</p>
+    <p style="font-size: 175%;" class="mspace">Nerdy info for nerds </p>
+    <p id="errnonode"><span style="color: #f2594b;">error: </span>webpage aren't ran by node js</p>
     <p>total page visits: <span id="visit_y" class="aqua">0</span></p>
     <p>page visits as of runtime: <span id="visit_n" class="aqua">0</span></p>
-    <p>runtime: <span id="uptime" class="aqua">0</span> minutes</p>
+    <p>server runtime: <span id="uptime" class="aqua">0</span> minutes</p>
     <p>IP address: <span id="ipaddr" class="aqua">127.0.0.1</span></p>
     <p>hostname: <span id="hostname" class="aqua">localhost</span> : <span id="port" class="green">0000</span></p>
+    <br>
+
+    <p style="font-size: 175%;" class="mspace">Contact Me!</p>
+    <form action="/api/msg" method="post" id="form">
+      <p style="margin-top: 10px; margin-bottom: 7.5px;">your email / name</p>
+      <input type="text" name="name" id="" placeholder="contack information">
+      <br>
+      <p style="margin-top: 20px; margin-bottom: 7.5px;">your messgae</p>
+      <textarea name="text" id="text" placeholder="message" rows="5"></textarea>
+      <br>
+      <input type="submit" id="send" value="send (anonymously)">
+    </form>
+    <br>
+
+    <footer>
+      <p>made with love by an animal &lt;3</p>
+    </footer>
   </div>
 
+
+  <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
   <script src="/scripts/main.js"></script>
 </body>
 </html>
