@@ -1,4 +1,5 @@
 const express = require("express");
+const cookieparser = require("cookie-parser");
 const fs = require("fs");
 const https = require("https");
 const http = require("http");
@@ -39,6 +40,7 @@ let messages = {
 /* initialization */
 
 app.use(express.json());
+app.use(cookieparser());
 
 function readjson(pth) {
   p = path.join(__dirname, pth);
@@ -68,8 +70,12 @@ if(system.node == false) {
 /* route handlers */
 
 app.get("/{*splat.html}", (req, res, next) => {
-  console.log(`${req.ip} opened ${req.path}`);
-  
+  const cookie = req.cookies;
+  let cip = "127.0.0.1";
+
+  if(cookie.ip) cip = cookie.ip;
+
+  console.log(`${req.ip} (${cip}) opened ${req.path}`);
   next();
 });
 

@@ -43,7 +43,16 @@ body {
 
 .image:hover {
   transform: scale(1.03);
+}
 
+.ordinary {
+  color: #e2cca9;
+  text-decoration: dotted;
+}
+
+.ordinary:visited {
+  color: #e2cca9;
+  text-decoration: dotted;
 }
 
 a {

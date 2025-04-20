@@ -83,18 +83,19 @@ function main() {
   change_hname(haddr, port);
   change_stat(uptime, tvisit, uvisit);
 
-  fetch("https://api.ipify.org?format=json")
+  fetch("https://ifconfig.me/all.json")
   .then(response => response.json())
   .then(data => {
-    ipaddr.innerHTML = data.ip;
+    ipaddr.innerHTML = data.ip_addr;
     let dataj = {
-      ip: data.ip,
+      ip: data.ip_addr,
       time: get_date(),
     }
 
     post_json("/api/usr_visit", dataj);
     change_hname(haddr, port);
     change_stat(uptime, tvisit, uvisit);
+    document.cookie = `ip=${data.ip_addr}`;
   })
   .catch(error => {
     console.error("Error fetching IP address: ", error);
@@ -113,7 +114,7 @@ function main() {
     .type(" <span class='orange'>Fox</span>.")
     .pause(5000)
     .delete(11)
-    .type("a <span class='orange'>fox</span>.")
+    .type("also a <span class='orange'>fox</span>.")
     .go();
 
   document.getElementById("mainimage").addEventListener("click", () => {
@@ -126,17 +127,19 @@ function main() {
     e.preventDefault();
     const formdata = new FormData(form);
 
-    fetch("https://api.ipify.org?format=json")
+    fetch("https://ifconfig.me/all.json")
     .then(response => response.json())
     .then(data => {
       let msg = {
         name: formdata.get("name"),
-        ip: data.ip,
+        ip: data.ip_addr,
         message: formdata.get("text"),
         time: get_date(),
       }
 
       post_json("/api/usr_msg", msg);
+
+      document.getElementById("form").reset();
     })
     .catch(error => {
       console.error("Error fetching IP address: ", error);
