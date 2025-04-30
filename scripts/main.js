@@ -1,4 +1,3 @@
-
 function change_hname(addr, port) {
   addr.innerHTML = window.location.hostname;
   port.innerHTML = window.location.port || 80;
@@ -6,12 +5,13 @@ function change_hname(addr, port) {
 
 function change_stat(uptime, tvisit, uvisit) {
   fetch("/data/system.json")
-  .then(response => response.json())
-  .then(data => {
-    uptime.innerHTML = data.uptime;
-    tvisit.innerHTML = data.tvisits;
-    uvisit.innerHTML = data.uvisits;
-    if(data.node == true) document.getElementById("errnonode").style = "display: none;"
+  .then(response => {
+    response.json().then(data => {
+      uptime.innerHTML = data.uptime;
+      tvisit.innerHTML = data.tvisits;
+      uvisit.innerHTML = data.uvisits;
+      if(response.headers.get("Node-Ran")) document.getElementById("errnonode").style = "display: none;"
+    });
   })
   .catch(error => {
     uptime.innerHTML = "0 (E)";

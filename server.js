@@ -128,6 +128,11 @@ app.post("/api/usr_msg", (req, res) => {
   res.status(200).json({ success: true });
 })
 
+app.get("/{*splat.json}", (req, res, next) => {
+  res.set("Node-Ran", "true");
+  next();
+})
+
 app.use(express.static("."));
 
 app.get("/*splat", (req, res) => {

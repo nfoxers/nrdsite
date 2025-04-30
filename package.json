@@ -10,7 +10,6 @@
   "description": "This is the official Github repository for my own (v3) personal site.   As of now I have not yet decided what will be this website's domain name, so i'll keep it floating for now.",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wkokplauo666/nrdsite.git"
