@@ -72,6 +72,7 @@ function get_date() {
   return formatted;
 }
 
+
 function main() {
   const ipaddr = document.getElementById("ipaddr");
   const haddr = document.getElementById("hostname");
@@ -106,6 +107,7 @@ function main() {
   new TypeIt("#name", {
     speed: 100,
     waitUntilVisible: true,
+    lifeLike: true
   })
     .type("Narsdq", { delay: 750 })
     .delete(3)
@@ -114,10 +116,19 @@ function main() {
     .type(" <span class='orange'>Fox</span>.")
     .pause(5000)
     .delete(11)
-    .type("also a <span class='orange'>fox</span>.")
+    .type("also a <span class='orange'>fox</span>!")
+    .pause(2000)
+    .type(" .")
+    .pause(1000)
+    .type(".")
+    .pause(1000)
+    .type(".")
+    .pause(500)
+    .options({speed: 200})
+    .type("haha...")
     .go();
 
-  document.getElementById("mainimage").addEventListener("click", () => {
+  document.getElementById("mainimage").addEventListener("pointerdown", () => {
     document.getElementById("kliks").innerHTML++;
   });
 
@@ -145,7 +156,17 @@ function main() {
       console.error("Error fetching IP address: ", error);
     });
   });
-
+  
+  document.querySelectorAll('.image').forEach(img => {
+    img.addEventListener('pointerdown', () => {
+      img.classList.remove('tap-animate');
+      void img.offsetWidth;
+      img.classList.add('tap-animate');
+      setTimeout(() => {
+        img.classList.remove('tap-animate');
+      }, 200);
+    });
+  });
 }
 
 main();

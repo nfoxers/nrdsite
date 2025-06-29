@@ -7,12 +7,14 @@ body {
 .start {
   text-align: center;
   font-size: 125%;
+  margin-bottom: 0px;
 }
 
 .sbelow {
   text-align: center;
   width: 90%;
   border-width: 0.5px;
+  margin-top: 4px;
   border-color: #e9b143;
 }
 
@@ -37,11 +39,15 @@ body {
   font-family: monospace;
 }
 
-.image {
-  transition: transform 0.3s ease;
+.lesspace p {
+  margin: 4px 0;
 }
 
-.image:hover {
+.image {
+  transition: transform 0.2s ease;
+}
+
+.image.tap-animate {
   transform: scale(1.03);
 }
 
@@ -63,6 +69,8 @@ a {
 a:visited {
   color: #d3869b;
 }
+
+
 
 footer p{
   font-family: monospace;
@@ -104,4 +112,10 @@ textarea {
   padding: 6px;
   resize: none;
   box-sizing: border-box;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .image:hover {
+    transform: scale(1.03);
+  }
 }
