@@ -1,6 +1,6 @@
 body {
-  background-color: #282828;
-  color: #e2cca9;
+  background-color: #32302f;
+  color: #d4be98;
   font-family: 'Arial', sans-serif;
 }
 
@@ -15,19 +15,19 @@ body {
   width: 90%;
   border-width: 0.5px;
   margin-top: 4px;
-  border-color: #e9b143;
+  border-color: #d8a657;
 }
 
 .orange {
-  color: #f28534;
+  color: #e78a4e;
 }
 
 .aqua {
-  color: #8bba7f
+  color: #89b482
 }
 
 .green {
-  color: #b0b846
+  color: #a9b665
 }
 
 .content {
@@ -62,15 +62,13 @@ body {
 }
 
 a {
-  color: #80aa9e;
+  color: #7daea3;
   text-decoration: none;
 }
 
 a:visited {
   color: #d3869b;
 }
-
-
 
 footer p{
   font-family: monospace;
@@ -84,8 +82,8 @@ form p {
 
 input {
   outline: none;
-  background-color: #32302f;
-  color: #e2cca9;
+  background-color: #3c3836;
+  color: #d4be98;
   width: 100%;
   border: none;
   padding: 6px;
@@ -93,7 +91,7 @@ input {
 }
 
 input#send {
-  background-color: #45403d;
+  background-color: #504945;
   width: 100%;
   margin: auto;
   margin-top: 2.5px;
@@ -105,13 +103,14 @@ input#send:hover {
 
 textarea {
   outline: none;
-  background-color: #32302f;
-  color: #e2cca9;
+  background-color: #3c3836;
+  color: #d4be98;
   width: 100%;
   border: none;
   padding: 6px;
   resize: none;
   box-sizing: border-box;
+  margin-top: 8px;
 }
 
 @media (hover: hover) and (pointer: fine) {
