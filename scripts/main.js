@@ -105,7 +105,7 @@ function main() {
 
 
   new TypeIt("#name", {
-    speed: 100,
+    speed: 150,
     waitUntilVisible: true,
     lifeLike: true
   })
@@ -124,7 +124,7 @@ function main() {
     .pause(1000)
     .type(".")
     .pause(500)
-    .options({speed: 200})
+    .options({speed: 250})
     .type("haha...")
     .go();
 

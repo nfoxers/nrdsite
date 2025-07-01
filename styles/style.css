@@ -12,7 +12,7 @@ body {
 
 .sbelow {
   text-align: center;
-  width: 90%;
+  width: 95%;
   border-width: 0.5px;
   margin-top: 4px;
   border-color: #d8a657;
@@ -31,7 +31,7 @@ body {
 }
 
 .content {
-  width: 90%;
+  width: 95%;
   margin: auto;
 }
 
@@ -48,7 +48,7 @@ body {
 }
 
 .image.tap-animate {
-  transform: scale(1.03);
+  transform: scale(1.015);
 }
 
 .ordinary {
@@ -59,6 +59,14 @@ body {
 .ordinary:visited {
   color: #e2cca9;
   text-decoration: dotted;
+}
+
+.hint {
+  margin-top: 10px; 
+  margin-bottom: 0px; 
+  color: #7c6f64; 
+  font-style: italic; 
+  font-size: small;
 }
 
 a {
@@ -115,6 +123,6 @@ textarea {
 
 @media (hover: hover) and (pointer: fine) {
   .image:hover {
-    transform: scale(1.03);
+    transform: scale(1.01);
   }
 }
