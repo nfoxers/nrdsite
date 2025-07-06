@@ -78,6 +78,10 @@ a:visited {
   color: #d3869b;
 }
 
+p {
+  font-family: 'Source Sans Pro',sans-serif;
+}
+
 footer p{
   font-family: monospace;
   text-align: center;
